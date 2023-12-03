@@ -11,7 +11,7 @@ window.onload = init();
 
 function readTheFile(){
   //lägger in en fil som man läser av. gör en array av det
-    document.getElementById('fileInput').addEventListener('change', (event) => {
+    document.getElementsByTagName("input")[0].addEventListener('change', (event) => {
         const file = event.target.files[0];
   
         if (file) {
@@ -46,12 +46,12 @@ function readFile(){
           let lastNumber = number[number.length - 1];
           //gör om så att det är en int och sedan addera ihop dem.
           total = parseInt(firstNumber + lastNumber);
-          
+
           sum += total;
-          console.log("String " + string);
-          console.log("First number " + firstNumber);
-          console.log("Last number " + lastNumber);
-          console.log("total " + total);
+        //  console.log("String " + string);
+        // console.log("First number " + firstNumber);
+        //  console.log("Last number " + lastNumber);
+        // console.log("total " + total);
         } else { 
           console.log("No numbers found in the string: " + string);
         }
